@@ -12,7 +12,7 @@ public class Main {
 
     public static void main(String[] args) {
         if (args.length != 2) {
-            System.err.println("Arguments number is incorrect");
+            System.err.println("Wrong arguments");
             return;
         }
 

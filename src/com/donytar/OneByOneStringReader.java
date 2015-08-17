@@ -20,10 +20,8 @@ public class OneByOneStringReader {
         BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
         String line;
         try {
-            while ((line = br.readLine()) != null) {
-                if (!receiver.onStringRead(line)) {
-                    break;
-                }
+            while ((line = br.readLine()) != null && receiver.onStringRead(line)) {
+                ;
             }
         } finally {
             br.close();
